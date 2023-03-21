@@ -1449,13 +1449,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NES - Metroid - Title Screen Menus & Ending_68
+      name: VictoryScreen
       rect:
         serializedVersion: 2
-        x: 1026
-        y: 95
-        width: 256
-        height: 240
+        x: 1030
+        y: 3
+        width: 253
+        height: 236
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1585,7 +1585,6 @@ TextureImporter:
       NES - Metroid - Title Screen Menus & Ending_66: -2037253965
       NES - Metroid - Title Screen Menus & Ending_51: 1311491612
       NES - Metroid - Title Screen Menus & Ending_58: 1564503250
-      NES - Metroid - Title Screen Menus & Ending_68: 1638999194
       NES - Metroid - Title Screen Menus & Ending_65: 119854984
       NES - Metroid - Title Screen Menus & Ending_31: -671260310
       NES - Metroid - Title Screen Menus & Ending_52: 181851602
@@ -1597,16 +1596,16 @@ TextureImporter:
       NES - Metroid - Title Screen Menus & Ending_54: -432681793
       NES - Metroid - Title Screen Menus & Ending_28: -1547534127
       NES - Metroid - Title Screen Menus & Ending_36: 975892106
-      NES - Metroid - Title Screen Menus & Ending_4: -1820784402
+      NES - Metroid - Title Screen Menus & Ending_43: 1753603624
       NES - Metroid - Title Screen Menus & Ending_41: 207180559
-      NES - Metroid - Title Screen Menus & Ending_17: -1113660792
+      NES - Metroid - Title Screen Menus & Ending_4: -1820784402
       NES - Metroid - Title Screen Menus & Ending_23: 240477544
       NES - Metroid - Title Screen Menus & Ending_45: 1924053689
+      NES - Metroid - Title Screen Menus & Ending_17: -1113660792
       NES - Metroid - Title Screen Menus & Ending_56: 539887619
-      NES - Metroid - Title Screen Menus & Ending_25: 8967003
       NES - Metroid - Title Screen Menus & Ending_64: 1526930526
       NES - Metroid - Title Screen Menus & Ending_24: -1651480830
-      NES - Metroid - Title Screen Menus & Ending_43: 1753603624
+      NES - Metroid - Title Screen Menus & Ending_25: 8967003
       NES - Metroid - Title Screen Menus & Ending_67: 1912616725
       NES - Metroid - Title Screen Menus & Ending_63: -1271005896
       NES - Metroid - Title Screen Menus & Ending_61: 524255698
@@ -1625,6 +1624,7 @@ TextureImporter:
       GameOver: 1028583463
       NES - Metroid - Title Screen Menus & Ending_53: 1850762721
       NES - Metroid - Title Screen Menus & Ending_46: 1258247331
+      VictoryScreen: 1638999194
       NES - Metroid - Title Screen Menus & Ending_44: 718223474
       NES - Metroid - Title Screen Menus & Ending_42: 2110439507
       NES - Metroid - Title Screen Menus & Ending_47: 144493878

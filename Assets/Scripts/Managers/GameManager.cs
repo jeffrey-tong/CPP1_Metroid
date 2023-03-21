@@ -100,7 +100,7 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if(SceneManager.GetActiveScene().buildIndex == 2)
+            if(SceneManager.GetActiveScene().buildIndex == 2 || SceneManager.GetActiveScene().buildIndex == 3)
             {
                 SceneManager.LoadScene(0);
             }
@@ -111,5 +111,11 @@ public class GameManager : MonoBehaviour
     {
         _maxLives = 30;
         SceneManager.LoadScene(2);
+    }
+
+    public void Victory()
+    {
+        _maxLives = 30;
+        SceneManager.LoadScene(3);
     }
 }

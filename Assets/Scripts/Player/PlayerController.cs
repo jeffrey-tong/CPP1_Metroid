@@ -153,4 +153,12 @@ public class PlayerController : MonoBehaviour
         jumpForceChange = null;
     }
 
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Victory")
+        {
+            GameManager.instance.Victory();
+        }
+    }
+
 }
