@@ -20,9 +20,6 @@ public class SpawnPickup : MonoBehaviour
             case 2:
                 Instantiate(pickupPrefab[2], this.transform);
                 break;
-            case 3:
-                Instantiate(pickupPrefab[3], this.transform);
-                break;
             default:
                 break;
         }

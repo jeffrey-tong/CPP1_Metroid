@@ -3031,8 +3031,8 @@ TextureImporter:
         y: 175
         width: 4
         height: 5
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3192,15 +3192,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Samus_147
+      name: Missile
       rect:
         serializedVersion: 2
         x: 278
         y: 169
         width: 11
         height: 8
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4968,10 +4968,10 @@ TextureImporter:
       Samus_224: 851166525
       Samus_179: 306067245
       Samus_56: -803368978
+      Missile: -1818130868
       Samus_15: -1398299774
       Samus_190: -1518189233
       Samus_202: 106477743
-      Samus_147: -1818130868
       Samus_187: 1828170789
       Samus_1: 175424130
       Samus_16: -1575412584

@@ -46,6 +46,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupPrefab:
   - {fileID: 7974504678627717496, guid: 41420c38a512ebd4b862da7f7fdae102, type: 3}
-  - {fileID: 7974504678627717496, guid: 045e2a3b8305d6248a67a2725e5035dc, type: 3}
   - {fileID: 7974504678627717496, guid: 35d94d8ebb45f7e43bdb5488694da6f6, type: 3}
-  - {fileID: 7974504678627717496, guid: f89c58d38d467ff41a3799ad3a41dc5b, type: 3}
+  - {fileID: 7974504678627717496, guid: 8c5fa3a634e821142ab240977c41f664, type: 3}

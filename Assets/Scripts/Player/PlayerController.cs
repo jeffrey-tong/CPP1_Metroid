@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     Animator anim;
     SpriteRenderer sr;
     BoxCollider2D collider;
+    AudioSourceManager asm;
 
     public float speed;
     public float jumpForce;
@@ -20,6 +21,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask isGroundLayer;
     public float groundCheckRadius;
 
+    public bool canJumpAttack = false;
     public bool canCrouch = false;
     public bool isCrouching;
     public Vector2 standingOffset;
@@ -29,35 +31,16 @@ public class PlayerController : MonoBehaviour
 
     Coroutine jumpForceChange;
 
-    public int _maxLives = 30;
-    public int _lives = 30;
-
-    public int lives
-    {
-        get { return _lives; }
-        set
-        {
-            _lives = value;
-            if(_lives > maxLives)
-            {
-                _lives = maxLives;
-            }
-        }
-    }public int maxLives
-    {
-        get { return _maxLives; }
-        set
-        {
-            _maxLives = value;
-        }
-    }
-
+    //soundclips
+    public AudioClip jumpSound;
+    
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
         collider = GetComponent<BoxCollider2D>();
+        asm = GetComponent<AudioSourceManager>();
 
         if(speed <= 0)
         {
@@ -87,7 +70,6 @@ public class PlayerController : MonoBehaviour
         AnimatorClipInfo[] curPlayingClip = anim.GetCurrentAnimatorClipInfo(0);
         float hInput = Input.GetAxisRaw("Horizontal");
         float vInput = Input.GetAxisRaw("Vertical");
-        Debug.Log(vInput);
 
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, isGroundLayer);
 
@@ -96,6 +78,11 @@ public class PlayerController : MonoBehaviour
             if (Input.GetButtonDown("Fire1") && curPlayingClip[0].clip.name != "Shoot")
             {
                 anim.SetTrigger("shoot");
+            }
+            else if (Input.GetButtonDown("Fire2") && curPlayingClip[0].clip.name != "Missile" && GameManager.instance.numMissiles > 0)
+            {
+                anim.SetTrigger("missile");
+                GameManager.instance.numMissiles--;
             }
             else
             {
@@ -107,11 +94,15 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity = Vector2.zero;
             rb.AddForce(Vector2.up * jumpForce);
+            canJumpAttack = true;
+            asm.PlayOneShot(jumpSound, false);
         }
-        if (!isGrounded && Input.GetButtonDown("Jump"))
+        if (!isGrounded && Input.GetButtonDown("Jump") && canJumpAttack)
         {
             anim.SetTrigger("JumpAttack");
             rb.AddForce(Vector2.up * jumpForce);
+            canJumpAttack = false;
+            asm.PlayOneShot(jumpSound, false);
         }
 
         if (canCrouch && vInput < -0.1)
@@ -161,4 +152,5 @@ public class PlayerController : MonoBehaviour
         jumpForce /= 2;
         jumpForceChange = null;
     }
+
 }

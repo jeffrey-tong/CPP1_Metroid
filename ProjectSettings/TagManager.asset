@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ground
   - Pickup
+  - Barrier
+  - Enemy
   layers:
   - Default
   - TransparentFX
